@@ -1,32 +1,70 @@
 import React from "react";
 import Logo from "../Logo/Logo";
 import gb from "../../images/gb.svg";
+import { SearchMode } from "../../App";
+import { MenuHover } from "../../App";
+import { data } from "./LinkData";
 
 const Header = () => {
+  const [searchMode, setSearchMode] = React.useContext(SearchMode);
+  const [selected, setSelected] = React.useState(null);
+  const [menuHover, setMenuHover] = React.useContext(MenuHover);
+
+  const toggle = (i) => {
+    if (selected === i) {
+      return setSelected(null);
+    }
+    setSelected(i);
+  };
+
   return (
     <header className="header">
       <Logo />
       <div className="header-links">
         <nav>
           <ul>
-            <li>
-              <a href="/men">men</a>
-            </li>
-            <li>
-              <a href="/women">women</a>
-            </li>
-            <li>
-              <a href="/lookbook">lookbook</a>
-            </li>
-            <li>
-              <a href="/journal">journal</a>
-            </li>
-            <li>
-              <a href="/stores">stores</a>
-            </li>
-            <li>
-              <a href="/brands">brands</a>
-            </li>
+            {data.map((item, i) => (
+              <li
+                className="nav-link"
+                onMouseEnter={() => {
+                  toggle(i);
+                }}
+                onMouseLeave={() => {
+                  setSelected(null);
+                }}
+              >
+                <a href={item.location} className="link">
+                  {item.name}
+                </a>
+                <ul className={selected === i ? "nav-list active" : "nav-list"}>
+                  <li>
+                    <a href={item.location}>{item.name}</a>
+                  </li>
+                  <li>
+                    <a href="#">{item.links[0]}</a>
+                    <a href="#">{item.links[1]}</a>
+                    <a href="#">{item.links[2]}</a>
+                    <a href="#">{item.links[3]}</a>
+                    <a href="#">{item.links[4]}</a>
+                    <a href="#">{item.links[5]}</a>
+                    <a href="#">{item.links[6]}</a>
+                  </li>
+                  <li>
+                    <a href="#">{item.secondary[0]}</a>
+                    <a href="#">{item.secondary[1]}</a>
+                    <a href="#">{item.secondary[2]}</a>
+                    <a href="#">{item.secondary[3]}</a>
+                    <a href="#">{item.secondary[4]}</a>
+                    <a href="#">{item.secondary[5]}</a>
+                    <a href="#">{item.secondary[6]}</a>
+                    <a href="#">{item.secondary[7]}</a>
+                    <a href="#">{item.secondary[8]}</a>
+                    <a href="#">{item.secondary[9]}</a>
+                    <a href="#">{item.secondary[10]}</a>
+                  </li>
+                </ul>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
@@ -34,7 +72,15 @@ const Header = () => {
         <button className="header-button country">
           <div className="country-flag"></div>
         </button>
-        <button className="header-button search">
+
+        <button
+          className={
+            searchMode ? "header-button search active" : "header-button search"
+          }
+          onClick={() => {
+            setSearchMode(!searchMode);
+          }}
+        >
           <div className="search-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -47,21 +93,26 @@ const Header = () => {
             </svg>
           </div>
         </button>
-        <a href="#" className="header-button music">
+
+        <a
+          href="https://www.carhartt-wip.com/musicplayer"
+          target="_blank"
+          className="header-button music"
+        >
           <div className="music-icon">
             <svg width="14px" height="15px" viewBox="0 0 14 15">
               <g
                 id="Carhartt-Layout"
                 stroke="none"
-                stroke-width="1"
+                strokeWidth="1"
                 fill="none"
-                fill-rule="evenodd"
+                fillRule="evenodd"
               >
                 <g
                   id="WIP-Full-Screen-Catagories-01"
                   transform="translate(-1891.000000, -23.000000)"
                   fill="#E6E6E6"
-                  fill-rule="nonzero"
+                  fillRule="nonzero"
                 >
                   <g id="Group">
                     <g

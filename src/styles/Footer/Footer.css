@@ -1,0 +1,41 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 100px 0 0;
+}
+
+.footer .footer-nav {
+  margin-bottom: 140px;
+}
+
+.footer .footer-nav .footer-links {
+  padding: 0 0 35px;
+}
+
+.footer .footer-nav .footer-links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 1.5rem;
+}
+
+.footer .footer-nav .footer-links ul li {
+  padding: 0 8px;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: 800;
+}
+
+.footer .footer-nav .footer-links ul li a {
+  text-decoration: underline;
+}
+
+.footer .newsletter {
+  background-color: #3f51b5;
+  color: #fff;
+  padding: 17px 20px 150px;
+  padding-bottom: 150px;
+  font-size: 0.875rem;
+}
+/*# sourceMappingURL=Footer.css.map */

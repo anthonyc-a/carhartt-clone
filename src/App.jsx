@@ -1,12 +1,22 @@
-import Header from "./components/Header/Header";
-import Nav from "./components/Header/Nav";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import NewArrivals from "./pages/Men/NewArrivals";
+export const SearchMode = React.createContext();
+export const MenuHover = React.createContext();
 
 function App() {
+  const [searchMode, setSearchMode] = React.useState(false);
+  const [menuHover, setMenuHover] = React.useState(false);
   return (
-    <div className="App">
-      <Header />
-      <Nav />
-    </div>
+    <>
+      <SearchMode.Provider value={[searchMode, setSearchMode]}>
+        <MenuHover.Provider value={[menuHover, setMenuHover]}>
+          <Routes>
+            <Route path="/" element={<NewArrivals />} exact></Route>
+          </Routes>
+        </MenuHover.Provider>
+      </SearchMode.Provider>
+    </>
   );
 }
 
