@@ -166,6 +166,7 @@
   visibility: hidden;
   background-color: #fff;
   border-bottom: 1px solid #e6e3e3;
+  z-index: 0;
 }
 
 .nav-list.active {
@@ -176,8 +177,6 @@
 
 .nav-list.active .link-contain li a {
   opacity: 1;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
 .nav-list li {

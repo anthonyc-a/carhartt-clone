@@ -133,6 +133,7 @@
   visibility: hidden;
   background-color: #fff;
   border-bottom: 1px solid #e6e3e3;
+  z-index: 0;
 
   &.active {
     height: 220px;
@@ -143,7 +144,6 @@
       li {
         a {
           opacity: 1;
-          transition: 0.5s;
         }
       }
     }

@@ -6,6 +6,7 @@ import { data } from "./LinkData";
 
 const Header = () => {
   const [searchMode, setSearchMode] = React.useContext(SearchMode);
+  
   const [selected, setSelected] = React.useState(null);
 
   const toggle = (i) => {
