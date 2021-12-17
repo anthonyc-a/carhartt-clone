@@ -2,13 +2,11 @@ import React from "react";
 import Logo from "../Logo/Logo";
 import gb from "../../images/gb.svg";
 import { SearchMode } from "../../App";
-import { MenuHover } from "../../App";
 import { data } from "./LinkData";
 
 const Header = () => {
   const [searchMode, setSearchMode] = React.useContext(SearchMode);
   const [selected, setSelected] = React.useState(null);
-  const [menuHover, setMenuHover] = React.useContext(MenuHover);
 
   const toggle = (i) => {
     if (selected === i) {
@@ -17,9 +15,34 @@ const Header = () => {
     setSelected(i);
   };
 
+  const linkLoop = (item) => {
+    var listItems = [];
+    for (var i = 0; i < item.links.length; i++) {
+      listItems.push(
+        <li>
+          <a href="/">{item.links[i]}</a>
+        </li>
+      );
+    }
+    return listItems;
+  };
+
+  const secondLoop = (item) => {
+    var listItems = [];
+    for (var i = 0; i < item.secondary.length; i++) {
+      listItems.push(
+        <li>
+          <a href="/">{item.secondary[i]}</a>
+        </li>
+      );
+    }
+    return listItems;
+  };
+
   return (
     <header className="header">
       <Logo />
+
       <div className="header-links">
         <nav>
           <ul>
@@ -27,7 +50,11 @@ const Header = () => {
               <li
                 className="nav-link"
                 onMouseEnter={() => {
-                  toggle(i);
+                  for (var n = 0; n < item.links.length; n++) {
+                    if (n > 0) {
+                      toggle(i);
+                    }
+                  }
                 }}
                 onMouseLeave={() => {
                   setSelected(null);
@@ -38,36 +65,19 @@ const Header = () => {
                 </a>
                 <ul className={selected === i ? "nav-list active" : "nav-list"}>
                   <li>
-                    <a href={item.location}>{item.name}</a>
+                    <a className="menu-title" href={item.location}>
+                      {item.name}
+                    </a>
                   </li>
-                  <li>
-                    <a href="#">{item.links[0]}</a>
-                    <a href="#">{item.links[1]}</a>
-                    <a href="#">{item.links[2]}</a>
-                    <a href="#">{item.links[3]}</a>
-                    <a href="#">{item.links[4]}</a>
-                    <a href="#">{item.links[5]}</a>
-                    <a href="#">{item.links[6]}</a>
-                  </li>
-                  <li>
-                    <a href="#">{item.secondary[0]}</a>
-                    <a href="#">{item.secondary[1]}</a>
-                    <a href="#">{item.secondary[2]}</a>
-                    <a href="#">{item.secondary[3]}</a>
-                    <a href="#">{item.secondary[4]}</a>
-                    <a href="#">{item.secondary[5]}</a>
-                    <a href="#">{item.secondary[6]}</a>
-                    <a href="#">{item.secondary[7]}</a>
-                    <a href="#">{item.secondary[8]}</a>
-                    <a href="#">{item.secondary[9]}</a>
-                    <a href="#">{item.secondary[10]}</a>
-                  </li>
+                  <div className="link-contain">{linkLoop(item)}</div>
+                  <div className="link-contain sale-on">{secondLoop(item)}</div>
                 </ul>
               </li>
             ))}
           </ul>
         </nav>
       </div>
+
       <div className="header-actions">
         <button className="header-button country">
           <div className="country-flag"></div>

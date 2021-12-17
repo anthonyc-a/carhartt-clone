@@ -123,11 +123,13 @@
 
 .nav-list {
   position: absolute;
+  display: flex;
+  align-items: unset;
   top: 60px;
   left: 0;
   width: 100%;
-  max-height: 0;
-  padding: 1rem 0;
+  height: 0;
+  padding-top: 1.5rem;
   visibility: hidden;
   background-color: #fff;
   border-bottom: 1px solid #e6e3e3;
@@ -136,12 +138,13 @@
     height: 220px;
     max-height: 220px;
     visibility: visible;
-    transition: max-height 0.25s cubic-bezier(0, 1, 0.5, 1);
 
-    li {
-      a {
-        opacity: 1;
-        transition: 0.5s;
+    .link-contain {
+      li {
+        a {
+          opacity: 1;
+          transition: 0.5s;
+        }
       }
     }
   }
@@ -149,53 +152,47 @@
   li {
     text-transform: capitalize;
     height: 100%;
+    font-size: 13px;
+    font-weight: 700;
 
     &:nth-child(1) {
-      flex: 0 0 256px;
+      display: flex;
+      flex: 0 0 240px;
 
-      a {
+      .menu-title {
         padding-left: 1.7rem;
       }
     }
+  }
+  .link-contain {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    height: 220px;
 
-    &:nth-child(2) {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      align-content: flex-start;
-      height: 220px;
-      padding-left: 0;
+    li {
+      display: block;
+      flex: unset;
+      height: 23px;
+      margin-right: 50px;
+      margin-bottom: 5px;
 
       a {
-        margin: 1px -0.5rem;
-        margin-right: 50px;
+        opacity: 0;
+        margin: 1px 0.5rem;
         padding: 5px 0.5rem;
       }
     }
+  }
 
-    &:nth-child(3) {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      align-content: flex-start;
-      height: 220px;
-      padding-left: 0;
-
-      a {
-        margin: 1px -0.5rem;
-        margin-right: 50px;
-        padding: 5px 0.5rem;
-
-        &:nth-last-child(1) {
+  .sale-on {
+    li {
+      &:nth-last-child(1) {
+        a {
           color: #e24f57;
         }
       }
-    }
-    a {
-      font-size: 13px;
-      font-weight: 700;
-      color: #363636;
-      opacity: 0;
     }
   }
 }

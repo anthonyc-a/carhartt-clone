@@ -23,7 +23,6 @@ export const data = [
       "Collaborations",
       "Sale",
     ],
-    linkLocation: ["women-new", "featured"],
   },
   {
     name: "Women",
@@ -50,6 +49,29 @@ export const data = [
       "Collaborations",
       "Sale",
     ],
-    linkLocation: ["men-new", "featured"],
+  },
+  {
+    name: "Lookbook",
+    location: "lookbook",
+    links: [],
+    secondary: [],
+  },
+  {
+    name: "Journal",
+    location: "journal",
+    links: ["News", "Collaboration", "Skateboarding", "Music", "radio"],
+    secondary: [],
+  },
+  {
+    name: "Stores",
+    location: "stores",
+    links: ["Carhartt WIP Stores", "Stockists", "Online Stockists"],
+    secondary: [],
+  },
+  {
+    name: "Brands",
+    location: "brands",
+    links: [],
+    secondary: [],
   },
 ];
