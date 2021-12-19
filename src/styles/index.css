@@ -72,6 +72,10 @@
   padding-left: 0;
 }
 
+.header .header-links nav ul .nav-link:nth-child(1) .link {
+  color: #e6e6e6;
+}
+
 .header .header-links nav ul .nav-link:hover .link {
   color: #e6e6e6;
 }
