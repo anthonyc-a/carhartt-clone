@@ -6,7 +6,7 @@ import { data } from "./LinkData";
 
 const Header = () => {
   const [searchMode, setSearchMode] = React.useContext(SearchMode);
-  
+
   const [selected, setSelected] = React.useState(null);
 
   const toggle = (i) => {
@@ -49,6 +49,7 @@ const Header = () => {
           <ul>
             {data.map((item, i) => (
               <li
+                key={i}
                 className="nav-link"
                 onMouseEnter={() => {
                   for (var n = 0; n < item.links.length; n++) {

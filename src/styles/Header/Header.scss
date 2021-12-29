@@ -16,7 +16,7 @@
     left: 0;
     height: 100%;
     margin-left: 1rem;
-    padding-right: 6rem;
+    padding-right: 5rem;
 
     path {
       fill: #fff;
@@ -207,8 +207,10 @@
   align-items: center;
   top: 60px;
   width: 100%;
-  height: 50px;
+  height: 48px;
   border-bottom: 1px solid #d8d8d8;
+  background-color: #fff;
+  z-index: 50;
 
   .breadcrumb {
     width: fit-content;
@@ -262,7 +264,7 @@
   align-items: center;
   top: 60px;
   width: 100%;
-  height: 50px;
+  height: 47px;
   transform: translateY(-50px);
   background-color: white;
   transition: 0.1s;
@@ -303,7 +305,7 @@
       font-family: "Karla", Arial, Helvetica, sans-serif;
       font-size: 13px;
       font-weight: 400;
-      padding: 1rem 15px;
+      padding: 1rem 15px 1rem 0;
       color: #969696;
       outline: none;
       border-radius: 0;
