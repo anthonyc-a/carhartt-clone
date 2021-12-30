@@ -124,11 +124,16 @@ main .products-grid .content article a .product-grid-item-img .product-img-conta
   transition: opacity 0.4s;
 }
 
+@media screen and (max-width: 790px) {
+  main .products-grid .content article a .product-grid-item-img .product-img-contain .overlay {
+    display: none;
+  }
+}
+
 main .products-grid .content article a .product-grid-item-data {
   display: block;
   opacity: 1;
   position: static;
-  text-align: center;
   margin: 0 auto;
   width: auto;
   height: auto;
@@ -141,11 +146,23 @@ main .products-grid .content article a .product-grid-item-data .center {
   text-align: center;
 }
 
+@media screen and (max-width: 790px) {
+  main .products-grid .content article a .product-grid-item-data .center {
+    text-align: unset;
+  }
+}
+
 main .products-grid .content article a .product-grid-item-data .center .title {
   padding: 16px 10px 0;
   font-size: 0.813em;
   font-weight: 700;
   line-height: 1.125rem;
+}
+
+@media screen and (max-width: 790px) {
+  main .products-grid .content article a .product-grid-item-data .center .title {
+    font-size: 0.938em;
+  }
 }
 
 main .products-grid .content article a .product-grid-item-data .center .title .descr {
@@ -169,10 +186,24 @@ main .products-grid .content article a .product-grid-item-data .center .price {
   font-weight: 700;
 }
 
+@media screen and (max-width: 790px) {
+  main .products-grid .content article a .product-grid-item-data .center .price {
+    font-size: 0.938em;
+    font-weight: 400;
+  }
+}
+
 main .products-grid .content article a .product-grid-item-data .center .price dd {
   text-align: center;
   margin: 0;
   padding: 0;
+}
+
+@media screen and (max-width: 790px) {
+  main .products-grid .content article a .product-grid-item-data .center .price dd {
+    text-align: unset;
+    padding: 0 10px 0;
+  }
 }
 
 main .products-grid .content article a .product-grid-item-data .center .price dd span::before {
@@ -189,6 +220,12 @@ main .products-grid .content article a .product-grid-item-data .sizes {
   opacity: 0;
   -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s;
+}
+
+@media screen and (max-width: 790px) {
+  main .products-grid .content article a .product-grid-item-data .sizes {
+    display: none;
+  }
 }
 
 main .products-grid .content article a .product-grid-item-data .sizes dl {
