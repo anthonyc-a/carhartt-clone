@@ -11,6 +11,12 @@
   z-index: 100;
 }
 
+@media screen and (max-width: 1024px) {
+  .header {
+    height: 55px;
+  }
+}
+
 .header .logo {
   position: relative;
   display: -webkit-box;
@@ -32,8 +38,22 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .header .logo {
+    margin-left: auto;
+    padding-right: 0;
+  }
+}
+
 .header .logo path {
   fill: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+  .header .logo svg {
+    width: 90px;
+    height: 22px;
+  }
 }
 
 .header .header-links {
@@ -47,6 +67,12 @@
 
 .header .header-links nav {
   height: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .header .header-links nav {
+    display: none !important;
+  }
 }
 
 .header .header-links nav ul {
@@ -101,6 +127,13 @@
   margin-left: auto;
 }
 
+@media screen and (max-width: 1024px) {
+  .header .header-actions {
+    margin-left: 0;
+    padding-left: 2rem;
+  }
+}
+
 .header .header-actions .header-button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -117,12 +150,25 @@
   transition: background 0.1s;
 }
 
+@media screen and (max-width: 1024px) {
+  .header .header-actions .header-button {
+    width: 55px;
+    height: 55px;
+  }
+}
+
 .header .header-actions .header-button:hover {
   background-color: #0000003a;
 }
 
 .header .header-actions .country {
   cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .header .header-actions .country {
+    display: none !important;
+  }
 }
 
 .header .header-actions .country .country-flag {
@@ -147,8 +193,26 @@
   fill: #e6e6e6;
 }
 
+.header .search .search-icon svg {
+  height: 24px;
+  width: 21px;
+  margin-bottom: -4px;
+}
+
+@media screen and (max-width: 1024px) {
+  .header .music {
+    display: none !important;
+  }
+}
+
 .header .music .music-icon {
   height: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+  .header .account {
+    display: none !important;
+  }
 }
 
 .header .account .account-icon {
@@ -339,6 +403,12 @@
   z-index: 50;
 }
 
+@media screen and (max-width: 1024px) {
+  .tertiary-nav {
+    top: 54px;
+  }
+}
+
 .tertiary-nav .breadcrumb {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -415,6 +485,12 @@
   z-index: 50;
 }
 
+@media screen and (max-width: 1024px) {
+  .search-bar {
+    top: 54px;
+  }
+}
+
 .search-bar.active {
   -webkit-transform: translateY(0);
           transform: translateY(0);
@@ -433,6 +509,12 @@
   height: 20px;
   margin-left: 1.5rem;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .search-bar .search-submit {
+    display: none;
+  }
 }
 
 .search-bar .search-submit .search-submit-icon {
@@ -468,5 +550,11 @@
           box-sizing: border-box;
   text-align: left;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 1024px) {
+  .search-bar .search-form input {
+    padding: 1rem 15px;
+  }
 }
 /*# sourceMappingURL=Header.css.map */
