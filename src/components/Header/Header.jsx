@@ -4,7 +4,7 @@ import gb from "../../images/gb.svg";
 import { SearchMode } from "../../App";
 import { data } from "./LinkData";
 
-const Header = () => {
+const Header = ({ cart, itemAdded }) => {
   const [searchMode, setSearchMode] = React.useContext(SearchMode);
 
   const [selected, setSelected] = React.useState(null);
@@ -20,7 +20,7 @@ const Header = () => {
     var listItems = [];
     for (var i = 0; i < item.links.length; i++) {
       listItems.push(
-        <li>
+        <li key={i}>
           <a href="/">{item.links[i]}</a>
         </li>
       );
@@ -32,7 +32,7 @@ const Header = () => {
     var listItems = [];
     for (var i = 0; i < item.secondary.length; i++) {
       listItems.push(
-        <li>
+        <li key={i}>
           <a href="/">{item.secondary[i]}</a>
         </li>
       );
@@ -142,6 +142,7 @@ const Header = () => {
             </svg>
           </div>
         </a>
+
         <button className="header-button account">
           <div className="account-icon">
             <svg
@@ -158,10 +159,13 @@ const Header = () => {
             </svg>
           </div>
         </button>
-        <a href="/" className="header-button cart">
+
+        <a href="/cart" className="header-button cart">
           <div className="cart-icon">
             <img src={gb} alt="Cart Icon" />
           </div>
+          <span className="cart-info-count">{cart.total_items}</span>
+          {itemAdded && <p className="cart-info-message">Item added to cart</p>}
         </a>
       </div>
     </header>

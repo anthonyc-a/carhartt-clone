@@ -1,6 +1,8 @@
-@charset "UTF-8";
 main {
+  margin: 0;
   margin-top: 152px;
+  padding: 0;
+  clear: both;
 }
 
 main .products-grid {
@@ -10,10 +12,33 @@ main .products-grid {
   margin: 20px auto;
 }
 
+@media screen and (max-width: 1040px) {
+  main .products-grid {
+    max-width: 756px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  main .products-grid {
+    max-width: 564px;
+  }
+}
+
 main .products-grid .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  max-width: 1680px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 main .products-grid .content article {
@@ -29,7 +54,20 @@ main .products-grid .content article {
           flex-direction: column;
   font-size: 1rem;
   padding: 0 5px 10px;
+  margin: 0;
   width: 33.33%;
+}
+
+@media screen and (max-width: 790px) {
+  main .products-grid .content article {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1265px) {
+  main .products-grid .content article {
+    width: 25%;
+  }
 }
 
 main .products-grid .content article a {
@@ -132,7 +170,7 @@ main .products-grid .content article a .product-grid-item-data .center .price dd
 }
 
 main .products-grid .content article a .product-grid-item-data .center .price dd span::before {
-  content: "£ ";
+  content: "$ ";
 }
 
 main .products-grid .content article a .product-grid-item-data .sizes {
@@ -184,5 +222,41 @@ main .products-grid .content article a .product-grid-item-data .sizes dl dd ul l
   color: #fff;
   display: inline-block;
   font-size: 0.75rem;
+}
+
+main .products-grid .content article a .product-grid-item-data .minimized .center {
+  position: absolute;
+  top: 45%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  right: 0;
+}
+
+main .products-grid .content article a .product-grid-item-data .minimized .center .title .colour {
+  font-weight: 700;
+  color: #fff;
+}
+
+main .products-grid .content article a .product-grid-item-data .minimized .center dl {
+  top: 50%;
+  margin-top: 25px;
+}
+
+main .products-grid .content article a .product-grid-item-data .minimized dl {
+  top: unset;
+  bottom: 0;
+}
+
+main .products-grid .content article a .info-hidden {
+  display: none;
+}
+
+main .products-grid .content article a .shrink {
+  min-height: unset;
+}
+
+main .products-grid .content .large-view {
+  width: 50%;
 }
 /*# sourceMappingURL=Products.css.map */

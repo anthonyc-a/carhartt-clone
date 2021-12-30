@@ -26,6 +26,12 @@
   padding-right: 5rem;
 }
 
+@media screen and (min-width: 1265px) {
+  .header .logo {
+    padding-right: 8rem;
+  }
+}
+
 .header .logo path {
   fill: #fff;
 }
@@ -153,6 +159,86 @@
   height: 16px;
 }
 
+.header .cart .cart-info-count {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: #fff;
+  background-color: #3d50ab;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.75rem;
+}
+
+.header .cart .cart-info-message {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  height: 0;
+  width: 100%;
+  color: #fff;
+  background-color: #3d50ab;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: show-message 1.2s ease-in-out;
+          animation: show-message 1.2s ease-in-out;
+}
+
+@-webkit-keyframes show-message {
+  0% {
+    height: 0;
+  }
+  25% {
+    height: 50px;
+  }
+  50% {
+    height: 50px;
+  }
+  75% {
+    height: 50px;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+@keyframes show-message {
+  0% {
+    height: 0;
+  }
+  25% {
+    height: 50px;
+  }
+  50% {
+    height: 50px;
+  }
+  75% {
+    height: 50px;
+  }
+  100% {
+    height: 0;
+  }
+}
+
 .nav-list {
   position: absolute;
   display: -webkit-box;
@@ -245,9 +331,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  top: 60px;
+  top: 59px;
   width: 100%;
-  height: 48px;
+  height: 50px;
   border-bottom: 1px solid #d8d8d8;
   background-color: #fff;
   z-index: 50;
@@ -318,9 +404,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  top: 60px;
+  top: 59px;
   width: 100%;
-  height: 47px;
+  height: 48px;
   -webkit-transform: translateY(-50px);
           transform: translateY(-50px);
   background-color: white;

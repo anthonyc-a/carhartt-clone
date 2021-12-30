@@ -1,7 +1,7 @@
 import * as React from "react";
 
 const Logo = (props) => (
-  <a href="https://www.carhartt-wip.com/" className="logo">
+  <a href="/" className="logo">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={145}

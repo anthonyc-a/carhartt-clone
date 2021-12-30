@@ -1,5 +1,14 @@
+$smaller: 480px;
+$small: 790px;
+$medium: 1040px;
+$large: 1265px;
+$extra-large: 1600px;
+
 main {
+  margin: 0;
   margin-top: 152px;
+  padding: 0;
+  clear: both;
 
   .products-grid {
     position: relative;
@@ -7,8 +16,22 @@ main {
     width: 90%;
     margin: 20px auto;
 
+    @media screen and (max-width: $medium) {
+      max-width: 756px;
+      width: 100%;
+    }
+
+    @media screen and (max-width: $small) {
+        max-width: 564px;
+      }
+
     .content {
       display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      max-width: 1680px;
+      margin: 0 auto;
+      padding: 0;
 
       article {
         position: relative;
@@ -17,7 +40,17 @@ main {
         flex-direction: column;
         font-size: 1rem;
         padding: 0 5px 10px;
+        margin: 0;
         width: 33.33%;
+
+        @media screen and (max-width: $small) {
+          width: 50%;
+        }
+
+        @media screen and (min-width: $large) {
+          width: 25%;
+        }
+
         a {
           position: relative;
           display: block;
@@ -96,7 +129,7 @@ main {
                   color: #9c9c9b;
                 }
               }
-              
+
               .price {
                 display: block;
                 margin: 0;
@@ -112,7 +145,7 @@ main {
 
                   span {
                     &::before {
-                      content: "£ ";
+                      content: "$ ";
                     }
                   }
                 }
@@ -167,8 +200,46 @@ main {
                 }
               }
             }
+
+            .minimized {
+              .center {
+                position: absolute;
+                top: 45%;
+                transform: translateY(-50%);
+                left: 0;
+                right: 0;
+
+                .title {
+                  .colour {
+                    font-weight: 700;
+                    color: #fff;
+                  }
+                }
+
+                dl {
+                  top: 50%;
+                  margin-top: 25px;
+                }
+              }
+              dl {
+                top: unset;
+                bottom: 0;
+              }
+            }
+          }
+
+          .info-hidden {
+            display: none;
+          }
+
+          .shrink {
+            min-height: unset;
           }
         }
+      }
+
+      .large-view {
+        width: 50%;
       }
     }
   }
