@@ -178,7 +178,8 @@ const Header = ({ cart, itemAdded }) => {
           <div className="cart-icon">
             <img src={gb} alt="Cart Icon" />
           </div>
-          <span className="cart-info-count">{cart.total_items}</span>
+          {cart.total_items > 0 && <span className="cart-info-count">{cart.total_items}</span>}
+          
           {itemAdded && <p className="cart-info-message">Item added to cart</p>}
         </a>
       </div>

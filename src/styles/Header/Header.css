@@ -266,6 +266,12 @@
           animation: show-message 1.2s ease-in-out;
 }
 
+@media screen and (max-width: 1040px) {
+  .header .cart .cart-info-message {
+    top: 55px;
+  }
+}
+
 @-webkit-keyframes show-message {
   0% {
     height: 0;

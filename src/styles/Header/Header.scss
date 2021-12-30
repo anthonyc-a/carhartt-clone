@@ -211,6 +211,10 @@ $extra-large: 1600px;
       align-items: center;
       animation: show-message 1.2s ease-in-out;
 
+      @media screen and (max-width: $medium) {
+        top: 55px;
+      }
+
       @keyframes show-message {
         0% {
           height: 0;
