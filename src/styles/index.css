@@ -679,6 +679,12 @@ main .products-grid .content {
   padding: 0;
 }
 
+@media screen and (max-width: 1040px) {
+  main .products-grid .content {
+    padding: 0 7px;
+  }
+}
+
 main .products-grid .content article {
   position: relative;
   display: -webkit-box;

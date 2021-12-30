@@ -22,8 +22,8 @@ main {
     }
 
     @media screen and (max-width: $small) {
-        max-width: 564px;
-      }
+      max-width: 564px;
+    }
 
     .content {
       display: flex;
@@ -32,6 +32,10 @@ main {
       max-width: 1680px;
       margin: 0 auto;
       padding: 0;
+
+      @media screen and (max-width: $medium) {
+        padding: 0 7px;
+      }
 
       article {
         position: relative;
