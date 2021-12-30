@@ -235,6 +235,7 @@ main .products-grid .content article a .product-grid-item-data .sizes dl {
   top: 42.25%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  text-align: center;
   margin: 0;
   padding: 0;
 }

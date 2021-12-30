@@ -1,6 +1,6 @@
 $smaller: 480px;
-$small: 768px;
-$medium: 1024px;
+$small: 790px;
+$medium: 1040px;
 $large: 1265px;
 $extra-large: 1600px;
 
@@ -33,7 +33,7 @@ $extra-large: 1600px;
     }
 
     @media screen and (max-width: $medium) {
-      margin-left: auto;
+      margin: 0 auto;
       padding-right: 0;
     }
 
@@ -102,7 +102,6 @@ $extra-large: 1600px;
 
     @media screen and (max-width: $medium) {
       margin-left: 0;
-      padding-left: 2rem;
     }
 
     .header-button {
@@ -233,6 +232,38 @@ $extra-large: 1600px;
   }
 }
 
+.burger-contain {
+  display: none;
+  width: 110px;
+
+  @media screen and (max-width: $medium) {
+    display: block;
+  }
+
+  .header-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    transition: background 0.1s;
+    cursor: pointer;
+
+    @media screen and (max-width: $medium) {
+      width: 55px;
+      height: 55px;
+    }
+
+    &:hover {
+      background-color: #0000003a;
+    }
+
+    svg {
+      fill: #fff;
+    }
+  }
+}
+
 .nav-list {
   position: absolute;
   display: flex;
@@ -328,6 +359,11 @@ $extra-large: 1600px;
     width: fit-content;
     ul {
       padding-left: 1.7rem;
+
+      @media screen and (max-width: $medium) {
+        padding-left: 1.3rem;
+      }
+
       li {
         font-size: 13px;
         font-weight: 700;
@@ -381,7 +417,7 @@ $extra-large: 1600px;
   background-color: white;
   transition: 0.1s;
   z-index: 50;
-  
+
   @media screen and (max-width: $medium) {
     top: 54px;
   }

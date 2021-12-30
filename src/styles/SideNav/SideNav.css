@@ -11,6 +11,12 @@
   line-height: 13px;
 }
 
+@media screen and (max-width: 790px) {
+  .side-nav {
+    display: none;
+  }
+}
+
 .side-nav a {
   display: block;
   font-weight: 700;
