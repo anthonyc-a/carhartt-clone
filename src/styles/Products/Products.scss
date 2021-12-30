@@ -10,6 +10,10 @@ main {
   padding: 0;
   clear: both;
 
+  @media screen and (max-width: $medium) {
+    margin-top: 132px;
+  }
+
   .products-grid {
     position: relative;
     max-width: 1680px;
