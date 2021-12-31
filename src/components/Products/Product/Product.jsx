@@ -9,7 +9,7 @@ const Product = ({
 }) => {
   return (
     <a
-      href="//:0"
+      href=""
       onClick={() => {
         setItemAdded(true);
         setTimeout(() => setItemAdded(false), 2000);

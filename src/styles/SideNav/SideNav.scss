@@ -16,7 +16,7 @@ $extra-large: 1600px;
   font-size: 13px;
   line-height: 13px;
 
-  @media screen and (max-width: $small) {
+  @media screen and (max-width: $medium) {
     display: none;
   }
 
