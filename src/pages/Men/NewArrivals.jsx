@@ -1,5 +1,7 @@
 import React from "react";
 import ChooseView from "../../components/ChooseView/ChooseView";
+import Footer from "../../components/Footer/Footer"
+import FooterBlock from "../../components/Footer/FooterBlock/FooterBlock";
 import Header from "../../components/Header/Header";
 import Nav from "../../components/Header/Nav";
 import Search from "../../components/Header/Search";
@@ -26,6 +28,8 @@ const NewArrivals = ({ products, cart, onAddToCart }) => {
         setItemAdded={setItemAdded}
         itemAdded={itemAdded}
       />
+      <FooterBlock />
+      <Footer />
     </div>
   );
 };

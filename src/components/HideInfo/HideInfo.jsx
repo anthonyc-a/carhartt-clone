@@ -8,7 +8,7 @@ const HideInfo = ({ hideInfo, setHideInfo }) => {
         setHideInfo(!hideInfo);
       }}
     >
-      {hideInfo ? <a href="//:0">show info</a> : <a href="//:0">hide info</a>}
+      {hideInfo ? <a href="#a">show info</a> : <a href="#a">hide info</a>}
     </div>
   );
 };

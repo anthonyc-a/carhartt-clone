@@ -6,7 +6,7 @@ const ChooseView = ({ largeView, setLargeView }) => {
       <ul>
         <li>
           <a
-            href="//:0"
+            href="#a"
             onClick={() => {
               largeView && setLargeView(false);
             }}
@@ -27,7 +27,7 @@ const ChooseView = ({ largeView, setLargeView }) => {
         </li>
         <li>
           <a
-            href="//:0"
+            href="#a"
             onClick={() => {
               !largeView && setLargeView(true);
             }}

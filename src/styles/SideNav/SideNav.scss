@@ -15,6 +15,7 @@ $extra-large: 1600px;
   text-align: center;
   font-size: 13px;
   line-height: 13px;
+  z-index: 1000;
 
   @media screen and (max-width: $medium) {
     display: none;

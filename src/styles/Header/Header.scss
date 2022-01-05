@@ -29,7 +29,7 @@ $extra-large: 1600px;
     padding-right: 5rem;
 
     @media screen and (min-width: $large) {
-      padding-right: 8rem;
+      padding-right: 6rem;
     }
 
     @media screen and (max-width: $medium) {
@@ -437,6 +437,10 @@ $extra-large: 1600px;
     height: 20px;
     margin-left: 1.5rem;
     cursor: pointer;
+
+    @media screen and (min-width: $large) {
+      flex: 0 0 232px;
+    }
 
     @media screen and (max-width: $medium) {
       display: none;
