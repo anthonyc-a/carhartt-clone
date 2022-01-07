@@ -6,7 +6,7 @@ const Nav = () => {
       <div className="breadcrumb">
         <ul>
           <li>
-            <a href="/men">Men</a>,<a href="/men-new">New Arrivals</a>
+            <a href="/">Men</a>,<a href="/">New Arrivals</a>
           </li>
         </ul>
       </div>

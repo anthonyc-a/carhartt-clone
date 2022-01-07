@@ -4,7 +4,7 @@ $medium: 1040px;
 $large: 1265px;
 $extra-large: 1600px;
 
-main {
+.products-page {
   margin: 0;
   margin-top: 152px;
   padding: 0;
@@ -13,7 +13,9 @@ main {
   @media screen and (max-width: $medium) {
     margin-top: 132px;
   }
+}
 
+main {
   .products-grid {
     position: relative;
     max-width: 1680px;
@@ -201,7 +203,7 @@ main {
                 right: 0;
                 top: 42.25%;
                 transform: translateY(-50%);
-            text-align: center;
+                text-align: center;
                 margin: 0;
                 padding: 0;
 

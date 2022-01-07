@@ -6,7 +6,6 @@ import { data } from "./LinkData";
 
 const Header = ({ cart, itemAdded }) => {
   const [searchMode, setSearchMode] = React.useContext(SearchMode);
-
   const [selected, setSelected] = React.useState(null);
 
   const toggle = (i) => {
@@ -76,7 +75,7 @@ const Header = ({ cart, itemAdded }) => {
                   setSelected(null);
                 }}
               >
-                <a href={item.location} className="link">
+                <a href="/" className="link">
                   {item.name}
                 </a>
                 <ul className={selected === i ? "nav-list active" : "nav-list"}>
@@ -174,7 +173,7 @@ const Header = ({ cart, itemAdded }) => {
           </div>
         </button>
 
-        <a href="/cart" className="header-button cart">
+        <a href="/" className="header-button cart">
           <div className="cart-icon">
             <img src={gb} alt="Cart Icon" />
           </div>

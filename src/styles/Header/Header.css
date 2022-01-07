@@ -530,13 +530,14 @@
           align-items: center;
   top: 59px;
   width: 100%;
-  height: 48px;
+  height: 50px;
   -webkit-transform: translateY(-50px);
           transform: translateY(-50px);
   background-color: white;
+  border-bottom: 1px solid #d8d8d8;
   -webkit-transition: 0.1s;
   transition: 0.1s;
-  z-index: 50;
+  z-index: 75;
 }
 
 @media screen and (max-width: 1040px) {

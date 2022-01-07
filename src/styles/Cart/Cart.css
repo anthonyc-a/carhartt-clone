@@ -1,0 +1,28 @@
+.cart-page {
+  padding-top: 60px;
+}
+
+.cart-page .cart-content {
+  border-bottom: 1px dashed #bfbfbf;
+}
+
+.cart-page .cart-content .main-title {
+  padding: 60px 0;
+  border: 1px dashed #bfbfbf;
+}
+
+.cart-page .cart-content .main-title span {
+  max-width: 1680px;
+  margin: 0 auto;
+  width: 87.34%;
+  font-weight: 700;
+  font-size: 1.875em;
+  line-height: 2.375rem;
+  display: block;
+}
+
+.cart-page .cart-content .empty-cart {
+  padding: 55px 0;
+  text-align: center;
+}
+/*# sourceMappingURL=Cart.css.map */

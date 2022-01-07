@@ -1,11 +1,10 @@
 import React from "react";
-import ChooseView from "../../components/ChooseView/ChooseView";
-import Footer from "../../components/Footer/Footer"
-import FooterBlock from "../../components/Footer/FooterBlock/FooterBlock";
-import Header from "../../components/Header/Header";
+import Helmet from "react-helmet"
 import Nav from "../../components/Header/Nav";
-import Search from "../../components/Header/Search";
+import ChooseView from "../../components/ChooseView/ChooseView";
+import FooterBlock from "../../components/Footer/FooterBlock/FooterBlock";
 import HideInfo from "../../components/HideInfo/HideInfo";
+import Layout from "../../components/Layout/Layout";
 import Products from "../../components/Products/Products";
 
 const NewArrivals = ({ products, cart, onAddToCart }) => {
@@ -14,22 +13,24 @@ const NewArrivals = ({ products, cart, onAddToCart }) => {
   const [itemAdded, setItemAdded] = React.useState(false);
 
   return (
-    <div>
-      <Header cart={cart} itemAdded={itemAdded} />
-      <Nav />
-      <Search />
-      <ChooseView largeView={largeView} setLargeView={setLargeView} />
-      <HideInfo hideInfo={hideInfo} setHideInfo={setHideInfo} />
-      <Products
-        products={products}
-        onAddToCart={onAddToCart}
-        hideInfo={hideInfo}
-        largeView={largeView}
-        setItemAdded={setItemAdded}
-        itemAdded={itemAdded}
-      />
-      <FooterBlock />
-      <Footer />
+    <div className="page-layout products-page">
+      <Helmet>
+        <title>Carhartt WIP New Arrivals | carhartt-wip.com</title>
+      </Helmet>
+      <Layout cart={cart} itemAdded={itemAdded}>
+        <Nav />
+        <ChooseView largeView={largeView} setLargeView={setLargeView} />
+        <HideInfo hideInfo={hideInfo} setHideInfo={setHideInfo} />
+        <Products
+          products={products}
+          onAddToCart={onAddToCart}
+          hideInfo={hideInfo}
+          largeView={largeView}
+          setItemAdded={setItemAdded}
+          itemAdded={itemAdded}
+        />
+        <FooterBlock />
+      </Layout>
     </div>
   );
 };
